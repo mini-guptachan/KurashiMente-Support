@@ -1,0 +1,2 @@
+# KurashiMente-Support
+くらしメンテのサポートとプライバシーポリシー
