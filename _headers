@@ -5,3 +5,11 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 /img/*
   Cache-Control: public, max-age=604800
+
+# Cloudflare Pages: keep the pages.dev hostnames out of search results.
+# The canonical site is https://kurashimainte.ohm.software/
+https://kurashimente-support.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.kurashimente-support.pages.dev/*
+  X-Robots-Tag: noindex
