@@ -7,11 +7,17 @@
   <style>
     :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif; }
     body { margin: 0; background: #f5f6f6; color: #1f2933; line-height: 1.7; }
-    main { max-width: 680px; margin: 0 auto; padding: 56px 24px 72px; }
+    main { max-width: 680px; margin: 0 auto; padding: 56px 24px 24px; }
     h1 { color: #087f7b; line-height: 1.25; }
     .card { background: #fff; border-radius: 18px; padding: 24px; box-shadow: 0 8px 24px #0b1f2414; }
     a { color: #087f7b; font-weight: 600; }
     small { color: #5f6b73; }
+    footer { max-width: 680px; margin: 0 auto; padding: 0 24px 56px; }
+    p.ohm-publisher { margin: 0; padding: 0; line-height: 0; }
+    .ohm-publisher a { display: inline-flex; align-items: center; min-height: 44px; margin: 0 -8px; padding: 0 8px; border: 0; border-radius: 10px; background: none; box-shadow: none; text-decoration: none; }
+    .ohm-publisher img { display: block; width: 179px; height: 24px; max-width: 100%; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+    .ohm-publisher a:hover { opacity: .8; }
+    .ohm-publisher a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; opacity: 1; }
     @media (prefers-color-scheme: dark) {
       body { background: #101918; color: #eef5f3; }
       .card { background: #182725; box-shadow: none; }
@@ -31,5 +37,8 @@
     </div>
     <p><small>最終更新：2026年9月28日</small></p>
   </main>
+  <footer>
+    <p class="ohm-publisher"><a href="https://ohm.software/ja/" aria-label="Ohm Softwareのサイト"><picture><source srcset="ohm-software-on-dark.svg" media="(prefers-color-scheme: dark)"><img src="ohm-software-on-light.svg" width="179" height="24" alt="" loading="lazy" decoding="async"></picture></a></p>
+  </footer>
 </body>
 </html>
