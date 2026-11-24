@@ -3,42 +3,245 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>くらしメンテ サポート</title>
-  <style>
-    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif; }
-    body { margin: 0; background: #f5f6f6; color: #1f2933; line-height: 1.7; }
-    main { max-width: 680px; margin: 0 auto; padding: 56px 24px 24px; }
-    h1 { color: #087f7b; line-height: 1.25; }
-    .card { background: #fff; border-radius: 18px; padding: 24px; box-shadow: 0 8px 24px #0b1f2414; }
-    a { color: #087f7b; font-weight: 600; }
-    small { color: #5f6b73; }
-    footer { max-width: 680px; margin: 0 auto; padding: 0 24px 56px; }
-    p.ohm-publisher { margin: 0; padding: 0; line-height: 0; }
-    .ohm-publisher a { display: inline-flex; align-items: center; min-height: 44px; margin: 0 -8px; padding: 0 8px; border: 0; border-radius: 10px; background: none; box-shadow: none; text-decoration: none; }
-    .ohm-publisher img { display: block; width: 179px; height: 24px; max-width: 100%; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
-    .ohm-publisher a:hover { opacity: .8; }
-    .ohm-publisher a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; opacity: 1; }
-    @media (prefers-color-scheme: dark) {
-      body { background: #101918; color: #eef5f3; }
-      .card { background: #182725; box-shadow: none; }
-      small { color: #b2c3bf; }
-    }
-  </style>
+  <title>くらしメンテ｜掃除・交換・点検の予定と実施日を記録するiPhoneアプリ</title>
+  <meta name="description" content="フィルター掃除、消耗品の交換、設備の点検。済ませた日を記録すると、決めた間隔から次の予定日を自動で更新します。無料・広告なし・会員登録なし、データはiPhoneの中だけ。使い方の見本、頻度の目安、サポートはこのページに。">
+  <link rel="canonical" href="https://kurashimainte.ohm.software/">
+  <link rel="alternate" hreflang="ja" href="https://kurashimainte.ohm.software/">
+  <link rel="alternate" hreflang="x-default" href="https://kurashimainte.ohm.software/">
+  <meta name="apple-itunes-app" content="app-id=6802042667">
+  <meta name="theme-color" content="#f5f6f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101918" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="くらしメンテ">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://kurashimainte.ohm.software/">
+  <meta property="og:title" content="くらしメンテ｜掃除・交換・点検の予定と実施日を記録するiPhoneアプリ">
+  <meta property="og:description" content="フィルター掃除、消耗品の交換、設備の点検。済ませた日を記録すると、決めた間隔から次の予定日を自動で更新します。無料・広告なし・会員登録なし、データはiPhoneの中だけ。使い方の見本、頻度の目安、サポートはこのページに。">
+  <meta property="og:image" content="https://kurashimainte.ohm.software/img/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="くらしメンテ：家の掃除・交換・点検を、もう忘れない">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/style.css?v=7117a521b2">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "くらしメンテ", "description": "フィルター掃除、消耗品の交換、設備の点検。済ませた日を記録すると、決めた間隔から次の予定日を自動で更新します。無料・広告なし・会員登録なし、データはiPhoneの中だけ。", "url": "https://kurashimainte.ohm.software/", "installUrl": "https://apps.apple.com/jp/app/id6802042667", "downloadUrl": "https://apps.apple.com/jp/app/id6802042667", "sameAs": ["https://apps.apple.com/jp/app/id6802042667"], "operatingSystem": "iOS 17.0以降", "applicationCategory": "LifestyleApplication", "inLanguage": "ja", "image": "https://kurashimainte.ohm.software/img/icon-512.png", "screenshot": ["https://kurashimainte.ohm.software/img/screen-today.webp", "https://kurashimainte.ohm.software/img/screen-items.webp", "https://kurashimainte.ohm.software/img/screen-add.webp", "https://kurashimainte.ohm.software/img/screen-history.webp"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "JPY"}, "publisher": {"@type": "Organization", "@id": "https://ohm.software/#org", "name": "Ohm Software", "url": "https://ohm.software/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "料金はかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "App Storeから無料でダウンロードして使えます。広告はありません。会員登録もいりません。"}}, {"@type": "Question", "name": "記録すると、次の予定日はどう決まりますか？", "acceptedAnswer": {"@type": "Answer", "text": "「実施済みとして記録」を押すと、その日が履歴に残り、項目ごとに決めた間隔（日・週・月・年）を足した日が次の予定日になります。たとえば1週間ごとの項目を8月14日に記録すると、次の予定日は8月21日です。毎週の曜日を指定することもできます。"}}, {"@type": "Question", "name": "予定日を過ぎてしまったら、どうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "「期限超過」として今日の画面に残ります。できるときに実施して記録すると、記録した日から次の予定日を数え直します。"}}, {"@type": "Question", "name": "通知は届きますか？", "acceptedAnswer": {"@type": "Answer", "text": "通知を有効にした項目だけ、iPhoneのローカル通知でお知らせします。通知を許可しなくてもアプリは使えます。通知の内容が外部へ送信されることはありません。"}}, {"@type": "Question", "name": "掃除や交換の間隔は、どう決めればよいですか？", "acceptedAnswer": {"@type": "Answer", "text": "テンプレートから選んで、頻度や場所を自由に変えられます。アプリやこのページに出てくる頻度は目安です。設備や製品の取扱説明書、メーカーの推奨、住まいの環境に合わせて調整してください。"}}, {"@type": "Question", "name": "データはどこに保存されますか？ほかの端末と同期できますか？", "acceptedAnswer": {"@type": "Answer", "text": "メンテナンス名、場所、予定日、実施履歴、通知設定は、お使いのiPhoneの中だけに保存されます。開発者のサーバーへの送信や、iCloud（CloudKit）による同期は行いません。"}}, {"@type": "Question", "name": "データを削除したいときは？", "acceptedAnswer": {"@type": "Answer", "text": "設定の「すべてのデータを削除」から、アプリ内のメンテナンス項目と履歴を削除できます。アプリを削除した場合も、端末内のアプリデータは削除されます。"}}, {"@type": "Question", "name": "対応している機種と言語は？", "acceptedAnswer": {"@type": "Answer", "text": "iOS 17以降のiPhoneで使えます。表示は日本語です。"}}]}</script>
+  <script src="/demo.js?v=c32ec2eb91" defer></script>
 </head>
 <body>
-  <main>
-    <h1>くらしメンテ サポート</h1>
-    <div class="card">
-      <p>くらしメンテは、家の掃除・交換・点検の予定と実施日を、シンプルに記録するためのアプリです。</p>
-      <h2>お問い合わせ</h2>
-      <p>使い方や不具合については、<a href="mailto:contact@ohm.software">contact@ohm.software</a> までご連絡ください。</p>
-      <h2>プライバシー</h2>
-      <p><a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p>
+  <a class="skip" href="#main">本文へ移動</a>
+  <header class="top">
+    <div class="wrap top-in">
+      <a class="brand" href="/"><img src="/img/icon-128.png" width="36" height="36" alt=""><span>くらしメンテ</span></a>
+      <nav aria-label="このサイトの中">
+        <a href="/#try">ためす</a>
+        <a href="/#features">できること</a>
+        <a href="/#frequency">頻度の目安</a>
+        <a href="/#faq">よくある質問</a>
+        <a href="/#support">サポート</a>
+        <a href="/privacy">プライバシーポリシー</a>
+      </nav>
+      <a class="pill" href="https://apps.apple.com/jp/app/id6802042667">App Storeで見る</a>
     </div>
-    <p><small>最終更新：2026年9月28日</small></p>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">くらしメンテ｜iPhoneアプリ</p>
+          <h1>家の掃除・交換・点検を、<em>もう忘れない</em></h1>
+          <p class="lead">くらしメンテは、家の掃除、消耗品の交換、設備点検の予定と実施日を記録するアプリです。済ませた日を記録すると、決めた間隔から次の予定日を自動で更新します。</p>
+          <div class="store"><a class="badge" href="https://apps.apple.com/jp/app/id6802042667"><picture><source srcset="/img/app-store-badge-white.svg" media="(prefers-color-scheme: dark)"><img src="/img/app-store-badge.svg" width="145" height="54" alt="App Storeからダウンロード"></picture></a><span class="muted">iPhone（iOS 17以降）</span></div>
+          <ul class="chips"><li>無料・広告なし</li><li>会員登録なし</li><li>データはiPhoneの中だけ</li></ul>
+        </div>
+        <figure class="shot"><img src="/img/screen-today.webp" width="600" height="1298" alt="くらしメンテの「今日のメンテ」画面。今週の日付と、期限超過・今日・7日以内の件数、今日の予定「浴室の排水口掃除」と「実施済みとして記録」ボタン" fetchpriority="high"></figure>
+      </div>
+    </section>
+
+    <section id="try" aria-labelledby="try-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="try-title">記録すると、次の予定日が決まります</h2>
+          <p>アプリの「今日のメンテ」と同じ流れを、ここで試せます。「実施済みとして記録」を押すと履歴に残り、今日から数えた次の予定日に変わります。間隔を変えると、次の日付も変わります。</p>
+        </div>
+        <div class="demo" data-demo>
+          <div class="demo-main">
+            <div class="demo-title"><h3>今日のメンテ</h3><span data-today>見本</span></div>
+            <ul class="tiles" aria-label="件数">
+              <li class="t-overdue"><b data-count="overdue">1</b>期限超過</li>
+              <li class="t-today"><b data-count="today">1</b>今日</li>
+              <li class="t-soon"><b data-count="soon">1</b>7日以内</li>
+            </ul>
+            <ul class="tasks">
+              <li class="task" data-task data-place="浴室" data-offset="-2">
+                <div class="task-head">
+                  <span class="task-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 2l1.8 5.2L17 9l-5.2 1.8L10 16l-1.8-5.2L3 9l5.2-1.8z"/><path d="M18 14l.9 2.6 2.6.9-2.6.9L18 21l-.9-2.6-2.6-.9 2.6-.9z"/></svg></span>
+                  <div>
+                    <h4>浴室の排水口掃除</h4>
+                    <p class="task-meta" data-meta>浴室・1週間ごと</p>
+                    <span class="status s-overdue" data-status>予定日を2日過ぎています</span>
+                  </div>
+                </div>
+                <div class="task-controls">
+                  <p class="task-next">次回 <b data-next></b></p>
+                  <label>間隔 <select aria-label="浴室の排水口掃除の間隔"><option value="1w" selected>1週間ごと</option><option value="2w">2週間ごと</option><option value="1m">1か月ごと</option><option value="3m">3か月ごと</option><option value="6m">6か月ごと</option><option value="1y">1年ごと</option></select></label>
+                  <button type="button" class="btn btn-record" data-record><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>実施済みとして記録</span></button>
+                  <p class="task-preview" data-preview></p>
+                </div>
+              </li>
+              <li class="task" data-task data-place="リビング" data-offset="0">
+                <div class="task-head">
+                  <span class="task-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="8" rx="2.5"/><path d="M7 9h10M7 17c1.2-1 2.3-1 3.5 0M13.5 17c1.2-1 2.3-1 3.5 0"/></svg></span>
+                  <div>
+                    <h4>エアコンフィルター掃除</h4>
+                    <p class="task-meta" data-meta>リビング・2週間ごと</p>
+                    <span class="status s-today" data-status>今日の予定です</span>
+                  </div>
+                </div>
+                <div class="task-controls">
+                  <p class="task-next">次回 <b data-next></b></p>
+                  <label>間隔 <select aria-label="エアコンフィルター掃除の間隔"><option value="1w">1週間ごと</option><option value="2w" selected>2週間ごと</option><option value="1m">1か月ごと</option><option value="3m">3か月ごと</option><option value="6m">6か月ごと</option><option value="1y">1年ごと</option></select></label>
+                  <button type="button" class="btn btn-record" data-record><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>実施済みとして記録</span></button>
+                  <p class="task-preview" data-preview></p>
+                </div>
+              </li>
+              <li class="task" data-task data-place="家全体" data-offset="5">
+                <div class="task-head">
+                  <span class="task-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span>
+                  <div>
+                    <h4>火災報知器の動作確認</h4>
+                    <p class="task-meta" data-meta>家全体・6か月ごと</p>
+                    <span class="status s-soon" data-status>あと5日</span>
+                  </div>
+                </div>
+                <div class="task-controls">
+                  <p class="task-next">次回 <b data-next></b></p>
+                  <label>間隔 <select aria-label="火災報知器の動作確認の間隔"><option value="1w">1週間ごと</option><option value="2w">2週間ごと</option><option value="1m">1か月ごと</option><option value="3m">3か月ごと</option><option value="6m" selected>6か月ごと</option><option value="1y">1年ごと</option></select></label>
+                  <button type="button" class="btn btn-record" data-record><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>実施済みとして記録</span></button>
+                  <p class="task-preview" data-preview></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="demo-side">
+            <h3>履歴</h3>
+            <ol class="history" data-history><li class="empty">記録すると、実施日と次の予定日がここに並びます。</li></ol>
+          </div>
+          <p class="demo-foot"><span>これはページの中だけで動く見本です。操作は保存も送信もされません。</span><button type="button" class="btn btn-quiet" data-reset>はじめに戻す</button></p>
+          <p class="sr" aria-live="polite" data-live></p>
+          <noscript><p class="demo-foot">ボタンを押して試すにはJavaScriptが必要です。上は見本の最初の状態です。</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="features-title">くらしメンテで、できること</h2>
+          <p>「最後にいつ実施したか」と「次はいつ実施するか」を、項目ごとに記録します。</p>
+        </div>
+        <div class="features">
+          <article class="feature">
+            <div><h3>今日やることが、ひと目でわかる</h3><p>予定日を過ぎた項目、今日の項目、7日以内の項目を「今日のメンテ」にまとめて表示します。今週の曜日を選ぶと、その日の項目も確かめられます。</p></div>
+            <figure><img src="/img/screen-today.webp" width="600" height="1298" alt="くらしメンテの「今日のメンテ」画面。今週の日付と、期限超過・今日・7日以内の件数、今日の予定「浴室の排水口掃除」と「実施済みとして記録」ボタン" loading="lazy" decoding="async"></figure>
+          </article>
+          <article class="feature">
+            <div><h3>場所とカテゴリで整理</h3><p>浴室、キッチン、洗面所などの場所と、掃除・メンテナンス・設備点検などのカテゴリで項目を分けられます。名前や場所で検索でき、使わなくなった項目はアーカイブにしまえます。</p></div>
+            <figure><img src="/img/screen-items.webp" width="600" height="1298" alt="くらしメンテの「メンテ項目」画面。浴室の排水口掃除、エアコンフィルター掃除、歯ブラシ交換、換気扇フィルター交換、火災報知器の動作確認が、場所と間隔つきで並ぶ" loading="lazy" decoding="async"></figure>
+          </article>
+          <article class="feature">
+            <div><h3>暮らしに合わせて間隔を決める</h3><p>テンプレートから選ぶか、自由に入力して追加します。間隔は日・週・月・年で決められ、毎週の曜日を指定することもできます。</p></div>
+            <figure><img src="/img/screen-add.webp" width="600" height="1298" alt="くらしメンテの「メンテ項目を追加」画面。メンテナンス名、カテゴリ、場所、繰り返しの間隔（日・週・月・年）を入力する" loading="lazy" decoding="async"></figure>
+          </article>
+          <article class="feature">
+            <div><h3>実施日と次の予定日が、履歴に残る</h3><p>「実施済みとして記録」を押すと履歴に残り、次回の予定日が自動で更新されます。前にいつやったか、次はいつかを、いつでも確かめられます。</p></div>
+            <figure><img src="/img/screen-history.webp" width="600" height="1298" alt="くらしメンテの「履歴」画面。項目ごとに実施日と次の予定日が日付順に並ぶ" loading="lazy" decoding="async"></figure>
+          </article>
+        </div>
+        <ul class="plain-list">
+          <li>通知を有効にした項目だけ、iPhoneのローカル通知でお知らせします。</li>
+          <li>データはこの端末内にのみ保存されます。会員登録、広告、アクセス解析、外部送信はありません。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="frequency" aria-labelledby="frequency-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="frequency-title">掃除・交換・点検の頻度の目安</h2>
+          <p>間隔を決めるときの参考に、メーカーや公的機関が公開している目安を集めました。右の列は、くらしメンテに入れるときの間隔の例です。</p>
+        </div>
+        <div class="table-wrap" tabindex="0" role="region" aria-labelledby="frequency-title">
+          <table>
+            <thead><tr><th scope="col">項目</th><th scope="col">公開されている目安</th><th scope="col">出典</th><th scope="col">くらしメンテでの間隔の例</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">エアコンのフィルター掃除</th><td>お掃除機能が付いていない機種は、2週間に1回程度</td><td><a href="https://www.ac.daikin.co.jp/clubdaikin/useful/aircon_clean" rel="noopener">ダイキン工業「エアコンのお掃除方法」</a></td><td class="set">2週間ごと</td></tr>
+              <tr><th scope="row">洗濯槽の槽洗浄</th><td>衣類用の塩素系漂白剤での槽洗浄は、月に1回が目安</td><td><a href="https://panasonic.jp/wash/special/mold.html" rel="noopener">パナソニック「洗濯槽の黒カビ 予防と対策」</a></td><td class="set">1か月ごと</td></tr>
+              <tr><th scope="row">歯ブラシの交換</th><td>「1か月に一度」を目安に交換</td><td><a href="https://faq.lion.co.jp/faq_detail.html?id=10907" rel="noopener">ライオン お客様センター「ハブラシの交換の目安」</a></td><td class="set">1か月ごと</td></tr>
+              <tr><th scope="row">住宅用火災警報器</th><td>定期的に作動確認を行い、設置後10年を目安に交換</td><td><a href="https://www.fdma.go.jp/relocation/html/life/juukei.html" rel="noopener">総務省消防庁「住宅用火災警報器」</a></td><td class="set">作動確認：6か月ごとなど<br>本体の交換：10年ごと</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">出典のページは2026年11月24日に確認しました。目安は機種や使い方で変わります。お使いの設備や製品の取扱説明書、メーカーの推奨頻度、住まいの環境に合わせて調整してください。</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="privacy-title">
+      <div class="narrow">
+        <div class="card tint">
+          <h2 id="privacy-title">記録は、iPhoneの中だけ</h2>
+          <p>くらしメンテは、入力したメンテナンス項目や履歴を開発者のサーバーへ送信・収集しません。広告、アクセス解析、ユーザー追跡、会員登録はありません。</p>
+          <p><a href="/privacy">プライバシーポリシー</a>をご確認ください。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="narrow">
+        <div class="sec-head"><h2 id="faq-title">よくある質問</h2></div>
+        <div class="faq">
+          <details><summary>料金はかかりますか？</summary><p>App Storeから無料でダウンロードして使えます。広告はありません。会員登録もいりません。</p></details>
+          <details><summary>記録すると、次の予定日はどう決まりますか？</summary><p>「実施済みとして記録」を押すと、その日が履歴に残り、項目ごとに決めた間隔（日・週・月・年）を足した日が次の予定日になります。たとえば1週間ごとの項目を8月14日に記録すると、次の予定日は8月21日です。毎週の曜日を指定することもできます。</p></details>
+          <details><summary>予定日を過ぎてしまったら、どうなりますか？</summary><p>「期限超過」として今日の画面に残ります。できるときに実施して記録すると、記録した日から次の予定日を数え直します。</p></details>
+          <details><summary>通知は届きますか？</summary><p>通知を有効にした項目だけ、iPhoneのローカル通知でお知らせします。通知を許可しなくてもアプリは使えます。通知の内容が外部へ送信されることはありません。</p></details>
+          <details><summary>掃除や交換の間隔は、どう決めればよいですか？</summary><p>テンプレートから選んで、頻度や場所を自由に変えられます。アプリやこのページに出てくる頻度は目安です。設備や製品の取扱説明書、メーカーの推奨、住まいの環境に合わせて調整してください。</p></details>
+          <details><summary>データはどこに保存されますか？ほかの端末と同期できますか？</summary><p>メンテナンス名、場所、予定日、実施履歴、通知設定は、お使いのiPhoneの中だけに保存されます。開発者のサーバーへの送信や、iCloud（CloudKit）による同期は行いません。</p></details>
+          <details><summary>データを削除したいときは？</summary><p>設定の「すべてのデータを削除」から、アプリ内のメンテナンス項目と履歴を削除できます。アプリを削除した場合も、端末内のアプリデータは削除されます。</p></details>
+          <details><summary>対応している機種と言語は？</summary><p>iOS 17以降のiPhoneで使えます。表示は日本語です。</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" aria-labelledby="support-title">
+      <div class="narrow">
+        <div class="card">
+          <h2 id="support-title">くらしメンテ サポート</h2>
+          <p>くらしメンテは、家の掃除・交換・点検の予定と実施日を、シンプルに記録するためのアプリです。</p>
+          <h2 id="contact">お問い合わせ</h2>
+          <p>使い方や不具合については、<a href="mailto:contact@ohm.software">contact@ohm.software</a> までご連絡ください。</p>
+          <h2>プライバシー</h2>
+          <p><a href="/privacy">プライバシーポリシー</a>をご確認ください。</p>
+        </div>
+        <p class="note"><small>最終更新：2026年11月24日</small></p>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="narrow">
+        <h2 id="cta-title">まずは、気になっている1つから。</h2>
+        <p class="muted">会員登録なし。入れてすぐ、最初の項目を登録できます。</p>
+        <div class="store"><a class="badge" href="https://apps.apple.com/jp/app/id6802042667"><picture><source srcset="/img/app-store-badge-white.svg" media="(prefers-color-scheme: dark)"><img src="/img/app-store-badge.svg" width="145" height="54" alt="App Storeからダウンロード" loading="lazy"></picture></a></div>
+      </div>
+    </section>
   </main>
+
   <footer>
-    <p class="ohm-publisher"><a href="https://ohm.software/ja/" aria-label="Ohm Softwareのサイト"><picture><source srcset="ohm-software-on-dark.svg" media="(prefers-color-scheme: dark)"><img src="ohm-software-on-light.svg" width="179" height="24" alt="" loading="lazy" decoding="async"></picture></a></p>
+    <div class="wrap">
+      <p class="foot-links"><a href="/">くらしメンテ</a><a href="/#support">サポート</a><a href="/privacy">プライバシーポリシー</a><a href="https://apps.apple.com/jp/app/id6802042667">App Store</a><a href="mailto:contact@ohm.software">contact@ohm.software</a></p>
+      <p class="ohm-publisher"><a href="https://ohm.software/ja/" aria-label="Ohm Softwareのサイト"><picture><source srcset="/ohm-software-on-dark.svg" media="(prefers-color-scheme: dark)"><img src="/ohm-software-on-light.svg" width="179" height="24" alt="" loading="lazy" decoding="async"></picture></a></p>
+    </div>
   </footer>
 </body>
 </html>
