@@ -1,0 +1,5 @@
+# くらしメンテ
+
+[公式サイト](https://kurashimainte.ohm.software/)は、自宅の掃除、交換、点検の予定を管理するiPhoneアプリを紹介しています。メンテナンスを済ませた日を記録すると、項目ごとに設定した間隔から次の予定日が決まります。[操作の見本](https://kurashimainte.ohm.software/#try)でこの流れを確認できます。
+
+[頻度の目安](https://kurashimainte.ohm.software/#frequency)には身近な作業例があります。[よくある質問](https://kurashimainte.ohm.software/#faq)と[サポート](https://kurashimainte.ohm.software/#support)では、使い方や問い合わせ先を案内しています。記録の保存場所や情報の取り扱いは[プライバシーポリシー](https://kurashimainte.ohm.software/privacy)に記載しています。

@@ -1,0 +1,8 @@
+# くらしメンテ
+
+フィルター掃除・消耗品の交換・設備の点検を行った日と、次の予定日を記録するiPhoneアプリです。
+
+- [使い方と画面の見本](https://kurashimainte.ohm.software/#try)
+- [掃除・交換・点検の頻度の目安](https://kurashimainte.ohm.software/#frequency)
+- [サポート](https://kurashimainte.ohm.software/#support)
+- [プライバシーポリシー](https://kurashimainte.ohm.software/privacy)
